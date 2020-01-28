@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Aplicativo.Views.TelaMeusGrupos"
+             Title="Meus Grupos">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Entry x:Name="entryPesquisarGrupos" Placeholder="Informe o nome do grupo"/>
+            <Button x:Name="buttonPesquisar" Text="Pesquisar"/>-->
+            <SearchBar x:Name="PesquisarGrupo" Placeholder="Informe o nome do grupo" SearchButtonPressed="PesquisarGrupo_SearchButtonPressed"/>
+            <ListView x:Name="ListaMeuGrupos" HasUnevenRows="True" SeparatorColor="Red" Margin="15" ItemSelected="ListaMeuGrupos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding nome,StringFormat='Nome Grupo: {0}'}" />
+                                <Label Text="{Binding descricaoGrupo,StringFormat='Descrição: {0}'}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>                   
+                </ListView.ItemTemplate>               
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

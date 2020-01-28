@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Aplicativo.Views.TelaRoteiros"
+             Title="Roteiros">
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<Label Text="Pesquisar Roteiro" HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="entryPesquisarRoteiros" Placeholder="Informe o roteiro - ex:orla de boa viagem"/>
+            <Button x:Name="buttonPesquisarRoteiro" Text="Pesquisar"/>-->
+            <SearchBar x:Name="SearchPesquisa" Placeholder="Informe o roteiro - ex:orla de boa viagem" SearchButtonPressed="SearchPesquisa_SearchButtonPressed"/>
+            <ListView x:Name="ListaGrupos" HasUnevenRows="True" SeparatorColor="Red" Margin="15" ItemSelected="ListaGrupos_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <Label Text="{Binding nome,StringFormat='Nome Grupo: {0}'}" />
+                                <Label Text="{Binding descricaoGrupo,StringFormat='Descrição: {0}'}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

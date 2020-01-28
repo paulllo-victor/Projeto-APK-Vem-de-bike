@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Aplicativo.Views.TelaParticipantesGrupo"
+             Title="Participantes">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView x:Name="ListarParticipantes" HasUnevenRows="True" SeparatorColor="Red" Margin="15"> 
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding nomeUsuario, StringFormat='Nome: {0}'}"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button x:Name="PariticiparGrupo" Text="Paticipar" Clicked="PariticiparGrupo_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

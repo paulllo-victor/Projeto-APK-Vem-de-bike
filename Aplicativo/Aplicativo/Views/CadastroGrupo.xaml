@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Aplicativo.Views.CadastroGrupo"
+             Title="Criar Grupo de Ciclismo">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="txtCodigo" IsVisible="False" IsEnabled="False"/>
+            <Label Text="Preencha os dados abaixo!" HorizontalOptions="CenterAndExpand" />
+            <Entry x:Name="entryNome" Placeholder="Informe o nome do grupo"/>
+            <Entry x:Name="entryHorarioSaida" Placeholder="Informe o Horario de saida"/>
+            <Entry x:Name="entryLocal" Placeholder="Informe o local de saída"/>
+            <Entry x:Name="entryDescricao" Placeholder="Informe a descrição do grupo"/>
+        <StackLayout Orientation="Horizontal">
+                <Button x:Name="buttonCriar" Text="Criar" Clicked="buttonCriar_Clicked" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="buttonExcluir" Text="Excluir" IsVisible="False" Clicked="buttonExcluir_Clicked" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="buttonCancelar" Text="Cancelar" Clicked="buttonCancelar_Clicked" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
